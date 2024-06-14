@@ -1,7 +1,6 @@
 import os
 import time
 from dotenv import load_dotenv
-from requests.exceptions import ConnectionError, ReadTimeout
 import telebot
 
 load_dotenv()
