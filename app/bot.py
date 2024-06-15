@@ -32,7 +32,7 @@ def send_welc(msg):
     
 @bot.callback_query_handler(lambda query: query.data == "dance_quiz")
 def dance_quiz(query):
-    forfeit1_text = "Forfeit time!\nDo this to exchange for clue!\n<placeholder text>"
+    forfeit1_text = "Forfeit time!\nDo this to exchange for clue!\nUntil the end of today, you cannot hit any of us!"
     forfeit1 = telebot.types.MessageEntity(type="bold",offset=0,length=len(forfeit1_text))
     dance_quiz = bot.send_poll(
         chat_id=query.message.chat.id,
@@ -66,7 +66,7 @@ def dance_quiz(query):
 
 @bot.callback_query_handler(lambda query: query.data == "image_quiz")
 def image_quiz(query):
-    forfeit2_text = "Forfeit time!\nDo this to exchange for clue!\n<placeholder text>"
+    forfeit2_text = "Forfeit time!\nDo this to exchange for clue!\nChange you Whatsapp DP to appointed image until 16 Jun 2024, 12 a.m."
     forfeit2 = telebot.types.MessageEntity(type="bold",offset=0,length=len(forfeit2_text))
 
     # candidate 1
@@ -147,10 +147,12 @@ def image_quiz(query):
         
     )
 
+    time.sleep(55)
+
     # clue: challenge 2
     bot.send_message(chat_id=query.message.chat.id, text="Here's your clue for challenge 2~ \nGuess the consonant key: \nThey are all 남성/남자.")
 
-    time.sleep(60)
+    time.sleep(20)
 
     # challenge 3
     forfeit3_text = "Forfeit time!\nHOW COULD YOU \nYou got no clue for this round!"
