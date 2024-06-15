@@ -147,6 +147,9 @@ def image_quiz(query):
         
     )
 
+    # clue: challenge 2
+    bot.send_message(chat_id=query.message.chat.id, text="Here's your clue for challenge 2~ \nGuess the consonant key: \nThey are all 남성/남자.")
+
     time.sleep(60)
 
     # challenge 3
