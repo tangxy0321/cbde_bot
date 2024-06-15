@@ -70,18 +70,24 @@ def image_quiz(query):
     forfeit2 = telebot.types.MessageEntity(type="bold",offset=0,length=len(forfeit2_text))
 
     # candidate 1
-    image1 = bot.send_photo(chat_id=query.message.chat.id,photo=open("./app/photo/cover.png","rb"),caption="This is our candidate 1")
+    image1 = bot.send_photo(chat_id=query.message.chat.id,photo=open("./app/photo/gyuvin.png","rb"),caption="This is our candidate 1")
     image1_quiz = bot.send_poll(
         chat_id=query.message.chat.id,
         question="Guess whose this is:",
         options=[
-            telebot.types.InputPollOption("A"),
-            telebot.types.InputPollOption("I"),
-            telebot.types.InputPollOption("U")
+            telebot.types.InputPollOption("Zhang Hao"),
+            telebot.types.InputPollOption("Ricky"),
+            telebot.types.InputPollOption("Gyuvin"),
+            telebot.types.InputPollOption("Taerae"),
+            telebot.types.InputPollOption("Han bin"),
+            telebot.types.InputPollOption("Matthew"),
+            telebot.types.InputPollOption("Yu jin"),
+            telebot.types.InputPollOption("Gunwook"),
+            telebot.types.InputPollOption("Jiwoong")
         ],
         type="quiz",
         allows_multiple_answers=False,
-        correct_option_id=1,
+        correct_option_id=2,
         is_anonymous=False,
         open_period=60,
         explanation=forfeit2_text,
@@ -90,18 +96,24 @@ def image_quiz(query):
     )
 
     # candidate 2
-    image2 = bot.send_photo(chat_id=query.message.chat.id,photo=open("./app/photo/cover.png","rb"),caption="This is our candidate 2")
+    image2 = bot.send_photo(chat_id=query.message.chat.id,photo=open("./app/photo/zhanghao.png","rb"),caption="This is our candidate 2")
     image2_quiz = bot.send_poll(
         chat_id=query.message.chat.id,
         question="Guess whose this is:",
         options=[
-            telebot.types.InputPollOption("A"),
-            telebot.types.InputPollOption("I"),
-            telebot.types.InputPollOption("U")
+            telebot.types.InputPollOption("Zhang Hao"),
+            telebot.types.InputPollOption("Ricky"),
+            telebot.types.InputPollOption("Gyuvin"),
+            telebot.types.InputPollOption("Taerae"),
+            telebot.types.InputPollOption("Han bin"),
+            telebot.types.InputPollOption("Matthew"),
+            telebot.types.InputPollOption("Yu jin"),
+            telebot.types.InputPollOption("Gunwook"),
+            telebot.types.InputPollOption("Jiwoong")
         ],
         type="quiz",
         allows_multiple_answers=False,
-        correct_option_id=1,
+        correct_option_id=0,
         is_anonymous=False,
         open_period=60,
         explanation=forfeit2_text,
@@ -110,18 +122,24 @@ def image_quiz(query):
     )
 
     # candidate 3
-    image3 = bot.send_photo(chat_id=query.message.chat.id,photo=open("./app/photo/cover.png","rb"),caption="This is our candidate 3")
+    image3 = bot.send_photo(chat_id=query.message.chat.id,photo=open("./app/photo/hanbin.png","rb"),caption="This is our candidate 3")
     image3_quiz = bot.send_poll(
         chat_id=query.message.chat.id,
         question="Guess whose this is:",
         options=[
-            telebot.types.InputPollOption("A"),
-            telebot.types.InputPollOption("I"),
-            telebot.types.InputPollOption("U")
+            telebot.types.InputPollOption("Zhang Hao"),
+            telebot.types.InputPollOption("Ricky"),
+            telebot.types.InputPollOption("Gyuvin"),
+            telebot.types.InputPollOption("Taerae"),
+            telebot.types.InputPollOption("Han bin"),
+            telebot.types.InputPollOption("Matthew"),
+            telebot.types.InputPollOption("Yu jin"),
+            telebot.types.InputPollOption("Gunwook"),
+            telebot.types.InputPollOption("Jiwoong")
         ],
         type="quiz",
         allows_multiple_answers=False,
-        correct_option_id=1,
+        correct_option_id=4,
         is_anonymous=False,
         open_period=60,
         explanation=forfeit2_text,
@@ -129,7 +147,7 @@ def image_quiz(query):
         
     )
 
-    time.sleep(45)
+    time.sleep(60)
 
     # challenge 3
     forfeit3_text = "Forfeit time!\nHOW COULD YOU \nYou got no clue for this round!"
