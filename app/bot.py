@@ -70,7 +70,7 @@ def image_quiz(query):
     forfeit2 = telebot.types.MessageEntity(type="bold",offset=0,length=len(forfeit2_text))
 
     # candidate 1
-    image1 = bot.send_photo(chat_id=query.message.chat.id,photo=open("./app/photo/gyuvin.png","rb"),caption="This is our candidate 1")
+    image1 = bot.send_photo(chat_id=query.message.chat.id,photo=open("./app/photo/gyuvin.jpg","rb"),caption="This is our candidate 1")
     image1_quiz = bot.send_poll(
         chat_id=query.message.chat.id,
         question="Guess whose this is:",
@@ -96,7 +96,7 @@ def image_quiz(query):
     )
 
     # candidate 2
-    image2 = bot.send_photo(chat_id=query.message.chat.id,photo=open("./app/photo/zhanghao.png","rb"),caption="This is our candidate 2")
+    image2 = bot.send_photo(chat_id=query.message.chat.id,photo=open("./app/photo/zhanghao.jpg","rb"),caption="This is our candidate 2")
     image2_quiz = bot.send_poll(
         chat_id=query.message.chat.id,
         question="Guess whose this is:",
@@ -122,7 +122,7 @@ def image_quiz(query):
     )
 
     # candidate 3
-    image3 = bot.send_photo(chat_id=query.message.chat.id,photo=open("./app/photo/hanbin.png","rb"),caption="This is our candidate 3")
+    image3 = bot.send_photo(chat_id=query.message.chat.id,photo=open("./app/photo/hanbin.jpg","rb"),caption="This is our candidate 3")
     image3_quiz = bot.send_poll(
         chat_id=query.message.chat.id,
         question="Guess whose this is:",
